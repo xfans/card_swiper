@@ -472,6 +472,11 @@ class _SwiperState extends _SwiperTimerMixin {
     setState(() {
       _activeIndex = index;
     });
+
+    final event = _controller.event;
+    if ((event is MoveIndexControllerEvent) && (event.newIndex != index)) {
+      return;
+    }
     widget.onIndexChanged?.call(index);
   }
 
