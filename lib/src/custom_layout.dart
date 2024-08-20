@@ -120,9 +120,9 @@ abstract class _CustomLayoutStateBase<T extends _SubSwiper> extends State<T>
 
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
-      onPanStart: _onPanStart,
-      onPanEnd: _onPanEnd,
-      onPanUpdate: _onPanUpdate,
+      onHorizontalDragStart: _onPanStart,
+      onHorizontalDragEnd: _onPanEnd,
+      onHorizontalDragUpdate: _onPanUpdate,
       child: ClipRect(
         child: Center(
           child: _buildContainer(list),
